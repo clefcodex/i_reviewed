@@ -1,0 +1,10 @@
+<div class="note">
+	<div>
+		<%= content_tag :span, "#{note.title} (#{time_ago_in_words note.created_at} ago)", 
+			class: "note-title" %>
+		<%= link_to "Delete Note", [@book, note], method: :delete %>
+	</div>
+	<!-- simple_format is a rail helper that display the content of a note or the content of anything you pass into it with a br tag embedded into it. -->
+	<!-- note.note is the content of the note-->
+	<div><%= simple_format note.note %></div>	 
+</div>
